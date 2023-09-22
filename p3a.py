@@ -17,17 +17,10 @@ def climb(x, h):
     # edit here
     while not summit:
         summit = True         # stop unless there's a way up
-        if h[x + 1] > h[x] and h[x+1]:
-            x = x + 1         # right is higher, go there
-            summit = False    # and keep going
-        elif h[x - 1] > h[x]:
-            x = x - 1         # left is higher, go there
-            summit = False    # and keep going
-        else: 
-            for x_new in range(max(0, x-5), min(99, x+5)): # check +-5 steps around
-                if h[x_new] > h[x]:
-                    x = x_new
-                    summit = False
+        for x_new in range(max(0, x-5), min(99, x+5)): # check +-5 steps around
+            if h[x_new] > h[x]:
+                x = x_new
+                summit = False
     return x
 
 
