@@ -24,4 +24,4 @@ def accept(S_old, S_new, T):
     else:
         print(False)
         
-accept(150, 140, 10)        
+accept(150, 140, 10000)        
